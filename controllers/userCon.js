@@ -1,6 +1,6 @@
 import { messages } from "../models/msgModel.js";
 import { user } from "../models/usermodel.js";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 export const register = async (req,res,next) =>{
     try{
