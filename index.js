@@ -16,7 +16,7 @@ connectDB();
 const app=express();
     
 const corsOptions = {
-    origin: 'http://localhost:5173', // Replace with your frontend URL
+    origin: 'https://chat-front-ochre.vercel.app', // Replace with your frontend URL
     methods: ['GET', 'POST'],
     credentials: true // Allowed HTTP methods
 };
@@ -34,7 +34,7 @@ app.use('/api/messages',msgRoutes);
 
 const io=new Server(server,{
     cors:{
-        origin:"http://localhost:5173",
+        origin:"https://chat-front-ochre.vercel.app",
         methods:["GET","POST"],
         credentials:true
     }
