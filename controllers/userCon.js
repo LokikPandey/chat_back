@@ -1,3 +1,4 @@
+import { messages } from "../models/msgModel.js";
 import { user } from "../models/usermodel.js";
 import bcrypt from "bcrypt";
 
@@ -80,10 +81,10 @@ export const getallusers =async(req,res,next)=>{
             "avatarImage",
             "_id",
         ]);
-
         return res.json(users);
     }catch(e)
     {
         next(e);
+        
     }
 }

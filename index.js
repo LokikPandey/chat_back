@@ -17,7 +17,8 @@ const app=express();
     
 const corsOptions = {
     origin: 'http://localhost:5173', // Replace with your frontend URL
-    methods: ['GET', 'POST'], // Allowed HTTP methods
+    methods: ['GET', 'POST'],
+    credentials: true // Allowed HTTP methods
 };
 app.use(cors(corsOptions));
 app.use(express.json());
