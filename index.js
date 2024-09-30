@@ -16,10 +16,12 @@ connectDB();
 const app=express();
     
 const corsOptions = {
-    origin: 'https://chat-front-ochre.vercel.app', // Replace with your frontend URL
-    methods: ['GET', 'POST'],
-    credentials: true // Allowed HTTP methods
+  origin: ['https://chat-front-ochre.vercel.app', 'https://chat-back-d48r.vercel.app'],
+  methods: ['GET', 'POST'],
+  credentials: true,
 };
+app.use(cors(corsOptions));
+
 app.use(cors(corsOptions));
 app.use(express.json());
 
