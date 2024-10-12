@@ -16,7 +16,7 @@ connectDB();
 const app=express();
     
 const corsOptions = {
-  origin: ['https://chat-front-ochre.vercel.app', 'https://chat-back-d48r.vercel.app'],
+  origin: ['https://chat-front-ochre.vercel.app'],
   methods: ['GET', 'POST'],
   credentials: true,
 };
